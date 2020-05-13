@@ -21,16 +21,16 @@ Func Login()
    Send("C:\Vital\Bin\Vital.exe")
    Sleep(1000)
    Send("{ENTER}")
-   WinWaitActive ("Conexión")
+   WinWaitActive ("ConexiÃ³n")
    Sleep(1000)
-   WinActive ("Conexión","")
+   WinActive ("ConexiÃ³n","")
    Sleep(1000)
    MouseClick("left",707,373,2,10)
    Sleep(1000)
    Send("{ENTER}")
    Sleep(1000)
 
-   If (WinActive ("Inicio de sesión") <> 0) Then
+   If (WinActive ("Inicio de sesiÃ³n") <> 0) Then
    Send("{ENTER}")
    EndIf
 
@@ -38,7 +38,7 @@ Func Login()
    Sleep(1000)
    Send("{DEL}")
    Sleep(1000)
-   WinWaitActive ("Conexión con SAHI en APOLO")
+   WinWaitActive ("ConexiÃ³n con SAHI en APOLO")
    Send("yeilet01")
    Sleep(1000)
    MouseClick("left",1018,610,1,10)
@@ -52,8 +52,8 @@ EndFunc
 Func Export_HCE()
 
    ;Ingreso al modulo
-   WinWaitActive ("Sistema de Administración Hospitalaria Integrada")
-   WinActivate("Sistema de Administración Hospitalaria Integrada")
+   WinWaitActive ("Sistema de AdministraciÃ³n Hospitalaria Integrada")
+   WinActivate("Sistema de AdministraciÃ³n Hospitalaria Integrada")
    Sleep(1000)
    MouseClick("left",99,40,1,10)
    Sleep(1000)
@@ -87,7 +87,7 @@ While $intCount <= $intLineCount
    ;Dentro del modulo
    MouseClick("left",579,49,1,10)
    Sleep(1000)
-   WinWaitActive("Historia Clínica Electrónica") ;Ventana Historia CLinica
+   WinWaitActive("Historia ClÃ­nica ElectrÃ³nica") ;Ventana Historia CLinica
    Sleep(1000)
    MouseClick("left",297,48,1,10)
    Sleep(1000)
@@ -105,7 +105,7 @@ While $intCount <= $intLineCount
    Sleep(1000)
    MouseClick("left",836,461,2,10)
    Sleep(1000)
-   WinWaitActive ("Historia Clínica Electrónica","Datos Generales")
+   WinWaitActive ("Historia ClÃ­nica ElectrÃ³nica","Datos Generales")
    Sleep(1000)
    MouseClick("left",588,734,1,10)
    Sleep(4000)
@@ -154,13 +154,13 @@ While $intCount <= $intLineCount
    Sleep(1000)
    MouseClick("left",1180,304,1,10);Listo
    Sleep(1000)
-   WinWaitActive("Historia Clínica - Datos Generales","Finalizó proceso exportación de HCE en PDF, resultados en el archivo:") ;Ventana de HC generada
+   WinWaitActive("Historia ClÃ­nica - Datos Generales","FinalizÃ³ proceso exportaciÃ³n de HCE en PDF, resultados en el archivo:") ;Ventana de HC generada
    Sleep(1000)
    Send("{ENTER}")
    Sleep(2000)
    MouseClick("left",1335,297,1,10)
    Sleep(1000)
-   WinActivate("Historia Clínica Electrónica")
+   WinActivate("Historia ClÃ­nica ElectrÃ³nica")
    Sleep(1000)
 
    Compress_Archive()
@@ -181,8 +181,8 @@ While $intCount <= $intLineCount
    Global $CcAddress = ""                                                   ; Copia de envio
    Global $BccAddress = ""
    Global $Importance = "Normal"                                            ; Prioridad del mensaje: "High", "Normal", "Low"
-   Global $Username = "jsciprian@husi.org.co"                               ; Direccion del usuario que envia el correo
-   Global $Password = "Unstopble.2005*"                                     ; Contraseña del usuario que envia el correo
+   Global $Username = "##########"                               ; Direccion del usuario que envia el correo
+   Global $Password = "##########"                                     ; ContraseÃ±a del usuario que envia el correo
    Global $IPPort = 25                                                      ; Puerto usado para enviar el correo
    Global $ssl = 0                                                          ; SSL
 
